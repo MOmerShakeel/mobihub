@@ -1,0 +1,270 @@
+[
+    {
+        "id": "0",
+        "name": "Apple",
+        "thumb": "https://logodix.com/logo/19234.png",
+        "phones": [
+            {
+                "id": "0",
+                "name": "IPhone 10S",
+                "thumb": "../img/Phone1.png"
+            },
+            {
+                "id": "1",
+                "name": "IPhone 9S",
+                "thumb": "../img/Phone2.png"
+            },
+            {
+                "id": "2",
+                "name": "IPhone 8S",
+                "thumb": "../img/Phone3.png"
+            },
+            {
+                "id": "3",
+                "name": "IPhone 7S",
+                "thumb": "../img/Phone4.png"
+            },
+            {
+                "id": "0",
+                "name": "IPhone 10X",
+                "thumb": "../img/Phone1.png"
+            },
+            {
+                "id": "1",
+                "name": "IPhone 9X",
+                "thumb": "../img/Phone2.png"
+            },
+            {
+                "id": "2",
+                "name": "IPhone 8X",
+                "thumb": "../img/Phone3.png"
+            },
+            {
+                "id": "3",
+                "name": "IPhone 7X",
+                "thumb": "../img/Phone4.png"
+            },
+            {
+                "id": "0",
+                "name": "IPhone 10",
+                "thumb": "../img/Phone1.png"
+            },
+            {
+                "id": "1",
+                "name": "IPhone 9",
+                "thumb": "../img/Phone2.png"
+            },
+            {
+                "id": "2",
+                "name": "IPhone 8",
+                "thumb": "../img/Phone3.png"
+            },
+            {
+                "id": "3",
+                "name": "IPhone 7",
+                "thumb": "../img/Phone4.png"
+            }
+        ]
+    },
+    {
+        "id": "1",
+        "name": "Samsung",
+        "thumb": "https://clipartcraft.com/images250_/samsung-logo-mobile-4.png",
+        "phones": [
+            {
+                "id": "0",
+                "name": "S10",
+                "thumb": "../img/Phone5.png"
+            },
+            {
+                "id": "1",
+                "name": "S9",
+                "thumb": "../img/Phone6.png"
+            },
+            {
+                "id": "2",
+                "name": "S8",
+                "thumb": "../img/Phone7.png"
+            },
+            {
+                "id": "3",
+                "name": "S7",
+                "thumb": "../img/Phone8.png"
+            },
+            {
+                "id": "0",
+                "name": "S10 Edge",
+                "thumb": "../img/Phone5.png"
+            },
+            {
+                "id": "1",
+                "name": "S9 Edge",
+                "thumb": "../img/Phone6.png"
+            },
+            {
+                "id": "2",
+                "name": "S8 Edge",
+                "thumb": "../img/Phone7.png"
+            },
+            {
+                "id": "3",
+                "name": "S7 Edge",
+                "thumb": "../img/Phone8.png"
+            },
+            {
+                "id": "0",
+                "name": "Note S10",
+                "thumb": "../img/Phone5.png"
+            },
+            {
+                "id": "1",
+                "name": "Note S9",
+                "thumb": "../img/Phone6.png"
+            },
+            {
+                "id": "2",
+                "name": "Note S8",
+                "thumb": "../img/Phone7.png"
+            },
+            {
+                "id": "3",
+                "name": "Note S7",
+                "thumb": "../img/Phone8.png"
+            }
+        ]
+    },
+    {
+        "id": "0",
+        "name": "Apple2",
+        "thumb": "https://logodix.com/logo/19234.png",
+        "phones": [
+            {
+                "id": "0",
+                "name": "IPhone 10S",
+                "thumb": "../img/Phone1.png"
+            },
+            {
+                "id": "1",
+                "name": "IPhone 9S",
+                "thumb": "../img/Phone2.png"
+            },
+            {
+                "id": "2",
+                "name": "IPhone 8S",
+                "thumb": "../img/Phone3.png"
+            },
+            {
+                "id": "3",
+                "name": "IPhone 7S",
+                "thumb": "../img/Phone4.png"
+            },
+            {
+                "id": "0",
+                "name": "IPhone 10X",
+                "thumb": "../img/Phone1.png"
+            },
+            {
+                "id": "1",
+                "name": "IPhone 9X",
+                "thumb": "../img/Phone2.png"
+            },
+            {
+                "id": "2",
+                "name": "IPhone 8X",
+                "thumb": "../img/Phone3.png"
+            },
+            {
+                "id": "3",
+                "name": "IPhone 7X",
+                "thumb": "../img/Phone4.png"
+            },
+            {
+                "id": "0",
+                "name": "IPhone 10",
+                "thumb": "../img/Phone1.png"
+            },
+            {
+                "id": "1",
+                "name": "IPhone 9",
+                "thumb": "../img/Phone2.png"
+            },
+            {
+                "id": "2",
+                "name": "IPhone 8",
+                "thumb": "../img/Phone3.png"
+            },
+            {
+                "id": "3",
+                "name": "IPhone 7",
+                "thumb": "../img/Phone4.png"
+            }
+        ]
+    },
+    {
+        "id": "1",
+        "name": "Samsung2",
+        "thumb": "https://clipartcraft.com/images250_/samsung-logo-mobile-4.png",
+        "phones": [
+            {
+                "id": "0",
+                "name": "S10",
+                "thumb": "../img/Phone5.png"
+            },
+            {
+                "id": "1",
+                "name": "S9",
+                "thumb": "../img/Phone6.png"
+            },
+            {
+                "id": "2",
+                "name": "S8",
+                "thumb": "../img/Phone7.png"
+            },
+            {
+                "id": "3",
+                "name": "S7",
+                "thumb": "../img/Phone8.png"
+            },
+            {
+                "id": "0",
+                "name": "S10 Edge",
+                "thumb": "../img/Phone5.png"
+            },
+            {
+                "id": "1",
+                "name": "S9 Edge",
+                "thumb": "../img/Phone6.png"
+            },
+            {
+                "id": "2",
+                "name": "S8 Edge",
+                "thumb": "../img/Phone7.png"
+            },
+            {
+                "id": "3",
+                "name": "S7 Edge",
+                "thumb": "../img/Phone8.png"
+            },
+            {
+                "id": "0",
+                "name": "Note S10",
+                "thumb": "../img/Phone5.png"
+            },
+            {
+                "id": "1",
+                "name": "Note S9",
+                "thumb": "../img/Phone6.png"
+            },
+            {
+                "id": "2",
+                "name": "Note S8",
+                "thumb": "../img/Phone7.png"
+            },
+            {
+                "id": "3",
+                "name": "Note S7",
+                "thumb": "../img/Phone8.png"
+            }
+        ]
+    }
+]
