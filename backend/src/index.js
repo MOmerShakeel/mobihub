@@ -4,6 +4,7 @@ const env = require('dotenv');
 const mongoose = require('mongoose');
 const brandRoutes = require("./routes/brand");
 const phoneRoutes = require("./routes/phone");
+const contactRoutes = require("./routes/contact");
 
 env.config();
 
@@ -23,6 +24,7 @@ db.once("open", function () {
 
 app.use("/api", brandRoutes);
 app.use("/api", phoneRoutes);
+app.use("/api", contactRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
