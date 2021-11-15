@@ -6,4 +6,9 @@ router.post("/contact/submit",
     contactEntry
 );
 
+router.get("/contact/getContact",
+    getContact
+);
+
+
 module.exports = router;

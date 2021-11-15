@@ -21,3 +21,12 @@ exports.contactEntry = (req, res) => {
         }
     });
 }
+
+
+exports.getContact = async (req, res) => {
+    Contact.find({}).exec((error, contact) => {
+        if (contact) {
+            res.status(200).json({ contact })
+        }
+    });
+};
