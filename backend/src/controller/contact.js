@@ -17,7 +17,7 @@ exports.contactEntry = (req, res) => {
     collection.save((error, contact) => {
         if (error) return res.status(400).json({ error });
         if (collection) {
-            res.status(201).json({ brand })
+            res.status(201).json({ contact })
         }
     });
 }
