@@ -8,9 +8,20 @@ import banner from "../src/img/banner.png";
 import image1 from "./img/PngItem_5092260.png";
 import image2 from "./img/PngItem_2105020.png";
 import image3 from "./img/Daco_5495910.png";
-import Collapse from "./Bin/Collapse"
-import data from "./data.json"
+import Collapse from "./Bin/Collapse";
+// import data from "./data.json";
+import axios from "axios";
+const data = [];
 function Repairs() {
+  axios
+    .get("http://localhost:5000/api/phone/getPhones")
+    .then((response) => {
+      console.log(response);
+      data = response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   const slider = (
     <AwesomeSlider className="aws-btn">
       <div className="coverOne">
@@ -57,7 +68,7 @@ function Repairs() {
               </li>
             </ul>
 
-            <div >
+            <div>
               <input
                 type="text"
                 class="searchTerm"
@@ -77,7 +88,7 @@ function Repairs() {
       </div>
       <div className="containerYellowBoxes">
         <div className="yellowBox">
-        <FaBookmark className="yellowLogo" />
+          <FaBookmark className="yellowLogo" />
           <div className="yellowText">
             <p className="yellowHead">Cost Friendly</p>
             <p className="yellowDesc">
@@ -89,7 +100,7 @@ function Repairs() {
           </div>
         </div>
         <div className="yellowBox">
-        <FaBookmark className="yellowLogo" />
+          <FaBookmark className="yellowLogo" />
           <div className="yellowText">
             <p className="yellowHead">Fully Authentic</p>
             <p className="yellowDesc">
@@ -101,7 +112,7 @@ function Repairs() {
           </div>
         </div>
         <div className="yellowBox">
-        <FaBookmark className="yellowLogo" />
+          <FaBookmark className="yellowLogo" />
           <div className="yellowText">
             <p className="yellowHead">Time Efficient</p>
             <p className="yellowDesc">
@@ -113,7 +124,7 @@ function Repairs() {
           </div>
         </div>
         <div className="yellowBox">
-        <FaBookmark className="yellowLogo" />
+          <FaBookmark className="yellowLogo" />
           <div className="yellowText">
             <p className="yellowHead">User Friendly</p>
             <p className="yellowDesc">
@@ -175,7 +186,7 @@ function Repairs() {
             margin: "30px",
             display: "flex",
             flexWrap: "wrap",
-            justifyContent:"space-around",
+            justifyContent: "space-around",
           }}
         >
           <div className="oneIcon2">
@@ -220,10 +231,11 @@ function Repairs() {
               <p>This is a dummy text</p>
             </div>
           </div>
-          
         </div>
       </div>
-      <div><Collapse data={data} /></div>
+      <div>
+        <Collapse data={data} />
+      </div>
     </div>
   );
 }

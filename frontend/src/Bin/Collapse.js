@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 import { render } from "sass";
 import "./Collapse.css";
+import axios from "axios";
 
 const list = [
   { item: "Screen Break" },
@@ -14,6 +16,7 @@ const list = [
 ];
 
 const Collapse = (props) => {
+  const history = useHistory();
   const all = props.data;
   const [brand, setBrand] = useState("");
   const [phone, setPhone] = useState("");
@@ -188,7 +191,8 @@ const Collapse = (props) => {
         );
     });
   };
-  const handleSubmit = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     const collection = {
       brand: brand,
       model: phone,
@@ -199,9 +203,18 @@ const Collapse = (props) => {
       optional: optionalProblem,
     };
     console.log(collection);
-    alert(
-      "Your request has been generated and recieved. We will get back to you shortly. Thank You."
-    );
+    // const { brand, phone, problem, name, address, contact, optionalProblem } =
+    //   collection;
+
+    await axios
+      .post("http://localhost:5000/api/contact/submit", collection)
+      .then(function (response) {
+        console.log(response);
+        console.log("Success");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
   return (
     <div>
@@ -255,8 +268,8 @@ const Collapse = (props) => {
         <button
           type="submit"
           className="submit"
-          onClick={() => {
-            handleSubmit();
+          onClick={(e) => {
+            handleSubmit(e);
           }}
         >
           {" "}
