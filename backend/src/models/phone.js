@@ -16,7 +16,7 @@ const phoneSchema = new mongoose.Schema({
         type:String
     },
     brand:{
-        type: mongoose.Schema.Types.ObjectId, ref: 'Brand'
+        type: mongoose.Schema.Types.ObjectId, ref: 'Brand', required: true
     }
 });
 
