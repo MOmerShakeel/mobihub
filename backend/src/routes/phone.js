@@ -10,8 +10,8 @@ router.get("/phone/getPhones",
     getPhones
 );
 
-router.get("/phone/getPhonesByBrand/:slug",
-    getPhonesByBrand
-);
+// router.get("/phone/getPhonesByBrand/:slug",
+//     getPhonesByBrand
+// );
 
 module.exports = router;

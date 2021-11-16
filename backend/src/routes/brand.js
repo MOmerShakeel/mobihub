@@ -1,9 +1,14 @@
 const express = require('express');
-const { createBrand, getBrands } = require('../controller/brand');
+const { createBrand, addToBrand, getBrands } = require('../controller/brand');
 const router = express.Router();
 
 router.post("/brand/create",
     createBrand
+);
+
+
+router.post("/brand/addToBrand",
+    addToBrand
 );
 
 router.get("/brand/getBrands",

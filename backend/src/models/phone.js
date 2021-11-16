@@ -1,22 +1,18 @@
 const mongoose = require('mongoose');
-const Brand  = require('../models/brand')
 
 const phoneSchema = new mongoose.Schema({
-    name:{
+    phoneName: {
         type: String,
         required: true,
         unique: true
     },
-    slug:{
+    slug: {
         type: String,
-        required: true,
+        // required: true,
         unique: true
     },
     phoneImage: {
-        type:String
-    },
-    brand:{
-        type: mongoose.Schema.Types.ObjectId, ref: 'Brand', required: true
+        type: String
     }
 });
 
