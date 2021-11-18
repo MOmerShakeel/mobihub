@@ -52,7 +52,6 @@
   color: #fff;
   margin: 10px 0;
   font-size: 30px;
-  background-color: lightslategrey;
   width: fit-content;
   border-radius: 5px;
   padding: 5px;
@@ -79,12 +78,12 @@
   width: max-content;
   height: max-content;
 }
-.container {
+.CollapseContainer {
   border: solid 1px gray;
   padding: 2px;
   border-radius: 5px;
   margin: 10px 10px;
-  width: 250px;
+  width: 160px;
 }
 .allVariants {
   height: max-content;

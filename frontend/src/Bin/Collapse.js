@@ -18,7 +18,7 @@ const list = [
 const Collapse = (props) => {
   const history = useHistory();
   const all = props.data;
-  console.log(all);
+  // console.log(all);
   const [brand, setBrand] = useState("");
   const [phone, setPhone] = useState("");
   const [problem, setProblem] = useState([]);
@@ -102,7 +102,7 @@ const Collapse = (props) => {
         return (
           <>
             <div className="phoneBox">
-              <div className="container">
+              <div className="CollapseContainer">
                 <div
                   onClick={() => {
                     setPhone(value.phoneName);
@@ -110,8 +110,8 @@ const Collapse = (props) => {
                   className="phones"
                   style={{
                     cursor: "pointer",
-                    width: "250px",
-                    height: "300px",
+                    width: "200px",
+                    height: "200px",
                     backgroundImage: `url(${value.phoneImage})`,
                     backgroundSize: "contain",
                     backgroundRepeat: "no-repeat",
@@ -127,7 +127,7 @@ const Collapse = (props) => {
           <>
             <div className="phoneBox">
               <div
-                className="container"
+                className="CollapseContainer"
                 style={{ border: "5px solid #FFC700" }}
               >
                 <div
@@ -137,8 +137,8 @@ const Collapse = (props) => {
                   className="phones"
                   style={{
                     cursor: "pointer",
-                    width: "250px",
-                    height: "300px",
+                    width: "150px",
+                    height: "200px",
                     backgroundImage: `url(${value.phoneImage})`,
                     backgroundSize: "contain",
                     backgroundRepeat: "no-repeat",
