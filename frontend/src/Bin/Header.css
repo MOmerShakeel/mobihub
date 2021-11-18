@@ -44,7 +44,7 @@ body{
 }
 
 .headerLi:active, .headerLi:visited, .headerLi:hover{
-    /* border-bottom: 1px solid rgb(235, 199, 0); */
+    /* border-bottom: 1px solid #FFC700; */
     color: #FFC700;
 }
 

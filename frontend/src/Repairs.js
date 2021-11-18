@@ -11,17 +11,24 @@ import image3 from "./img/Daco_5495910.png";
 import Collapse from "./Bin/Collapse";
 // import data from "./data.json";
 import axios from "axios";
-const data = [];
+
 function Repairs() {
-  axios
-    .get("http://localhost:5000/api/phone/getPhones")
+  const [data,setData] = React.useState([]);
+  React.useEffect((e) => {
+    getData();
+  },[]);
+
+  const getData = async () => {
+    await axios
+      .get("http://localhost:5000/api/brand/getBrands")
     .then((response) => {
-      console.log(response);
-      data = response.data;
+
+      setData(response.data.brands);
     })
     .catch((error) => {
       console.log(error);
     });
+  }
   const slider = (
     <AwesomeSlider className="aws-btn">
       <div className="coverOne">
@@ -48,38 +55,25 @@ function Repairs() {
     <div className="body">
       <div className="top">
         <div className="firstsection">
-          <span className="header">Mobihub Repairs</span>
+          <span className="header"><img src="https://mobihubrepairs.com/wp-content/uploads/2021/07/New-Logo-PNG-01.png" style={{ width: "400px" }} /></span>
           <div className="firstSectionComponents">
             <span className="firstSectionHeading">
-              Get your phones repaired at your doorstep
+            Any device. Anywhere. Any Time.
             </span>
             <ul className="gridItem">
               <li className="listComponent">
                 <FaBookmark className="bookmarkicon" />
-                <p>Trained Professionals</p>
+                <p>Guranteed Satisfaction</p>
               </li>
               <li className="listComponent">
                 <FaBookmark className="bookmarkicon" />
-                <p>Doorstep Service</p>
+                <p>Expert Technicians</p>
               </li>
               <li className="listComponent">
                 <FaBookmark className="bookmarkicon" />
-                <p>6-months warranty</p>
+                <p>Certified Grades</p>
               </li>
             </ul>
-
-            <div>
-              <input
-                type="text"
-                class="searchTerm"
-                placeholder="Search for your phone..."
-              />
-              <button type="submit" class="searchButton">
-                <i>
-                  <FaSearch />
-                </i>
-              </button>
-            </div>
           </div>
         </div>
         <div className="imageContainer">
@@ -92,22 +86,16 @@ function Repairs() {
           <div className="yellowText">
             <p className="yellowHead">Cost Friendly</p>
             <p className="yellowDesc">
-              This is a dummy text.This is a dummy text. This is a dummy text.
-              This is a dummy text. This is a dummy text. This is a dummy
-              text.This is a dummy text. This is a dummy text. This is a dummy
-              text. This is a dummy text.
+            Mobihub aims to provide the perfect balance between cost and customer satisfaction.
             </p>
           </div>
         </div>
         <div className="yellowBox">
           <FaBookmark className="yellowLogo" />
           <div className="yellowText">
-            <p className="yellowHead">Fully Authentic</p>
+            <p className="yellowHead">Trained Experts</p>
             <p className="yellowDesc">
-              This is a dummy text.This is a dummy text. This is a dummy text.
-              This is a dummy text. This is a dummy text. This is a dummy
-              text.This is a dummy text. This is a dummy text. This is a dummy
-              text. This is a dummy text.
+            MobiHub utilizes a team of professional technicians, who know the best way to fix your device. 
             </p>
           </div>
         </div>
@@ -116,22 +104,16 @@ function Repairs() {
           <div className="yellowText">
             <p className="yellowHead">Time Efficient</p>
             <p className="yellowDesc">
-              This is a dummy text.This is a dummy text. This is a dummy text.
-              This is a dummy text. This is a dummy text. This is a dummy
-              text.This is a dummy text. This is a dummy text. This is a dummy
-              text. This is a dummy text.
+            In a hurry? Get your device fixed within 24 hours! Lightning fast service, at the best prices!
             </p>
           </div>
         </div>
         <div className="yellowBox">
           <FaBookmark className="yellowLogo" />
           <div className="yellowText">
-            <p className="yellowHead">User Friendly</p>
+            <p className="yellowHead">Premium Service</p>
             <p className="yellowDesc">
-              This is a dummy text. This is a dummy text. This is a dummy text.
-              This is a dummy text. This is a dummy text. This is a dummy
-              text.This is a dummy text. This is a dummy text. This is a dummy
-              text. This is a dummy text.
+            Our representatives are trained to provide the best customer service possible! Feel right at home, as our team listens to your issues, and provides the best solution possible!
             </p>
           </div>
         </div>

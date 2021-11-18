@@ -18,6 +18,7 @@ const list = [
 const Collapse = (props) => {
   const history = useHistory();
   const all = props.data;
+  console.log(all);
   const [brand, setBrand] = useState("");
   const [phone, setPhone] = useState("");
   const [problem, setProblem] = useState([]);
@@ -40,13 +41,13 @@ const Collapse = (props) => {
             }}
             style={{
               cursor: "pointer",
-              border: "5px solid #FECB12",
+              border: "5px solid #FFC700",
               minHeight: "150px",
               maxHeight: "150px",
               minWidth: "150px",
               maxWidth: "150px",
               backgroundPosition: "center",
-              backgroundImage: `url(${value.thumb})`,
+              backgroundImage: `url(${value.brandImage})`,
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
             }}
@@ -66,7 +67,7 @@ const Collapse = (props) => {
               minWidth: "150px",
               maxWidth: "150px",
               border: "1px groove grey",
-              backgroundImage: `url(${value.thumb})`,
+              backgroundImage: `url(${value.brandImage})`,
               backgroundPosition: "center",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
@@ -96,54 +97,54 @@ const Collapse = (props) => {
   };
   const renderPhones = () => {
     data = all.filter((item) => brand.includes(item.name));
-    return data[0].phones.map((value) => {
-      if (value.name !== phone) {
+    return data[0].phone.map((value) => {
+      if (value.phoneName !== phone) {
         return (
           <>
             <div className="phoneBox">
               <div className="container">
                 <div
                   onClick={() => {
-                    setPhone(value.name);
+                    setPhone(value.phoneName);
                   }}
                   className="phones"
                   style={{
                     cursor: "pointer",
                     width: "250px",
                     height: "300px",
-                    backgroundImage: `url(${value.thumb})`,
+                    backgroundImage: `url(${value.phoneImage})`,
                     backgroundSize: "contain",
                     backgroundRepeat: "no-repeat",
                   }}
                 ></div>
-                <p className="phonetext">{value.name}</p>
+                <p className="phonetext">{value.phoneName}</p>
               </div>
             </div>
           </>
         );
-      } else if (value.name === phone) {
+      } else if (value.phoneName === phone) {
         return (
           <>
             <div className="phoneBox">
               <div
                 className="container"
-                style={{ border: "5px solid #FECB12" }}
+                style={{ border: "5px solid #FFC700" }}
               >
                 <div
                   onClick={() => {
-                    setPhone(value.name);
+                    setPhone(value.phoneName);
                   }}
                   className="phones"
                   style={{
                     cursor: "pointer",
                     width: "250px",
                     height: "300px",
-                    backgroundImage: `url(${value.thumb})`,
+                    backgroundImage: `url(${value.phoneImage})`,
                     backgroundSize: "contain",
                     backgroundRepeat: "no-repeat",
                   }}
                 ></div>
-                <p className="phonetext">{value.name}</p>
+                <p className="phonetext">{value.phoneName}</p>
               </div>
             </div>
           </>
@@ -194,13 +195,13 @@ const Collapse = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const collection = {
-      brand: brand,
-      model: phone,
-      problem: problem,
-      name: name,
-      address: address,
-      contact: contact,
-      optional: optionalProblem,
+      "brand": brand,
+      "model": phone,
+      "problem": problem,
+      "name": name,
+      "address": address,
+      "contact": contact,
+      "optional": optionalProblem,
     };
     console.log(collection);
     // const { brand, phone, problem, name, address, contact, optionalProblem } =
@@ -211,6 +212,15 @@ const Collapse = (props) => {
       .then(function (response) {
         console.log(response);
         console.log("Success");
+        alert("Sumitted. We will reach out to you shortly")
+        setAddress("")
+        setBrand("")
+        setContact("")
+        setName("")
+        setOptionalProblem("")
+        setPhone("")
+        setProblem([])
+        setProblemStatement("")
       })
       .catch(function (error) {
         console.log(error);
